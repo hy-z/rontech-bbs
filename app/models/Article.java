@@ -2,8 +2,13 @@ package models;
 
 import java.util.List;
 
-import javax.persistence.*;
-import play.data.validation.Constraints.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import play.data.validation.Constraints.MaxLength;
+import play.data.validation.Constraints.MinLength;
+import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 
 @Entity

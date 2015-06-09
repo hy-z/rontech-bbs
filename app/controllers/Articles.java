@@ -55,7 +55,7 @@ public class Articles extends Controller {
     @Security.Authenticated(Secured.class)
     public static Result update(Long id){
         Form<Article> filledForm = articleForm.bindFromRequest();
-        if(filledForm.hasErrors()) {
+        if(filledForm.hasErrors()){
             return badRequest(
                 views.html.about.render(models.Article.select(id), filledForm)
             );

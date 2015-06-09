@@ -20,10 +20,14 @@
             <p>Write by @User.selectName(article.user_id)</p>
           </div>
 	@form(routes.Articles.update(article.id)) {
+
+	 @if(session.get("name")==User.selectName(article.user_id)||User.checkAdmin(session.get("name"))){
+
 	  <button type="submit" class="btn btn-success">編集</button>
 	}
+
 	</div>
-      </div>
+    } </div>
     }
     </div>
     </div>
